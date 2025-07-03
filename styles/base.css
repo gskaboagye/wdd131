@@ -1,0 +1,102 @@
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      color: #1a1a1a;
+    }
+
+    header {
+      background-color: #014f86;
+      color: #ffffff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    #course-title {
+      display: block;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background-color: #003049;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: #b2ebf2;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ef476f;
+      border-radius: 5px;
+      color: #ffffff;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    main h1 {
+      text-align: center;
+      color: #014f86;
+      margin-bottom: 2rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      border: 1px solid #d9d9d9;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h2 {
+      background-color: #ef476f;
+      color: #ffffff;
+      padding: 0.5rem;
+      border-radius: 5px 5px 0 0;
+      text-align: center;
+    }
+
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .about-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #002b36;
+      color: #b2ebf2;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    footer p:first-of-type {
+      margin-bottom: 0.5rem;
+    }
+
+    #lastModified {
+      color: #ffd166;
+    }
