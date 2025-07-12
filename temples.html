@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Temple Album</title>
+
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Merriweather&display=swap" rel="stylesheet">
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/temples.css">
-  <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 32rem)">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Merriweather&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/temples.css" />
+  <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 32rem)" />
+
   <!-- JavaScript -->
   <script src="scripts/temples.js" defer></script>
 </head>
 <body>
   <header>
     <h1>Temple Album</h1>
-    <button id="menu">&#9776;</button>
+    <button id="menu" aria-label="Menu">&#9776;</button>
     <nav class="navigation">
       <a href="#">Home</a>
       <a href="#">Old</a>
@@ -24,47 +27,49 @@
       <a href="#">Small</a>
     </nav>
   </header>
+
   <main>
     <h1>Temples of the World</h1>
-    <section class="grid-container">
+    <section class="grid">
       <figure>
-        <img src="images/1.jpg" alt="Temple 1">
+        <img src="images/1.jpg" alt="Temple One" />
         <figcaption>Temple One</figcaption>
       </figure>
       <figure>
-        <img src="images/2.jpg" alt="Temple 2">
+        <img src="images/2.jpg" alt="Temple Two" />
         <figcaption>Temple Two</figcaption>
       </figure>
       <figure>
-        <img src="images/3.jpg" alt="Temple 3">
+        <img src="images/3.jpg" alt="Temple Three" />
         <figcaption>Temple Three</figcaption>
       </figure>
       <figure>
-        <img src="images/4.jpg" alt="Temple 4">
+        <img src="images/4.jpg" alt="Temple Four" />
         <figcaption>Temple Four</figcaption>
       </figure>
       <figure>
-        <img src="images/5.jpg" alt="Temple 5">
+        <img src="images/5.jpg" alt="Temple Five" />
         <figcaption>Temple Five</figcaption>
       </figure>
       <figure>
-        <img src="images/6.jpg" alt="Temple 6">
+        <img src="images/6.jpg" alt="Temple Six" />
         <figcaption>Temple Six</figcaption>
       </figure>
       <figure>
-        <img src="images/7.jpg" alt="Temple 7">
+        <img src="images/7.jpg" alt="Temple Seven" />
         <figcaption>Temple Seven</figcaption>
       </figure>
       <figure>
-        <img src="images/8.jpg" alt="Temple 8">
+        <img src="images/8.jpg" alt="Temple Eight" />
         <figcaption>Temple Eight</figcaption>
       </figure>
       <figure>
-        <img src="images/9.jpg" alt="Temple 9">
+        <img src="images/9.jpg" alt="Temple Nine" />
         <figcaption>Temple Nine</figcaption>
       </figure>
     </section>
   </main>
+
   <footer>
     <p>&copy; <span id="year"></span> | Godfred Aboagye Sefa | WDD 131</p>
     <p id="lastModified"></p>

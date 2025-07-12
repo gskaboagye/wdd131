@@ -24,26 +24,7 @@ header {
   position: relative;
 }
 
-nav {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--primary-color);
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 1rem;
-  border-top: 1px solid #ffffff44;
-  transition: background-color 0.3s;
-}
-
-nav a:hover {
-  background-color: var(--hover-color);
-}
-
-#menu {
+#hamburgerBtn {
   font-size: 1.5rem;
   background: none;
   border: none;
@@ -55,20 +36,35 @@ nav a:hover {
   cursor: pointer;
 }
 
-#menu::after {
+#hamburgerBtn::after {
   content: "☰";
 }
 
-#menu.open::after {
+#hamburgerBtn.open::after {
   content: "✖";
 }
 
-nav.open {
+.navigation {
+  display: none;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  text-align: center;
+}
+
+.navigation.open {
   display: flex;
 }
 
-nav:not(.open) {
-  display: none;
+.navigation a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  border-top: 1px solid #ffffff44;
+  transition: background-color 0.3s;
+}
+
+.navigation a:hover {
+  background-color: var(--hover-color);
 }
 
 main {
@@ -81,7 +77,7 @@ main h1 {
   color: var(--primary-color);
 }
 
-.grid {
+.grid-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;

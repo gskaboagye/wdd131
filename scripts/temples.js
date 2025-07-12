@@ -1,22 +1,25 @@
-// Dynamic Footer Year and Last Modified
+// Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", () => {
+  // Set the current year in the footer
   const yearSpan = document.querySelector("#year");
-  const lastModifiedSpan = document.querySelector("#lastModified");
-
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
   }
 
-  if (lastModifiedSpan) {
-    lastModifiedSpan.textContent = `Last Modified: ${document.lastModified}`;
+  // Set the last modified date in the footer
+  const lastModified = document.querySelector("#lastModified");
+  if (lastModified) {
+    lastModified.textContent = `Last Modified: ${document.lastModified}`;
   }
 
-  // Hamburger Menu Toggle
+  // Hamburger menu toggle functionality
   const menuButton = document.querySelector("#menu");
-  const nav = document.querySelector("nav");
+  const navigation = document.querySelector(".navigation");
 
-  menuButton.addEventListener("click", () => {
-    menuButton.classList.toggle("open");
-    nav.classList.toggle("open");
-  });
+  if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+      menuButton.classList.toggle("open");
+      navigation.classList.toggle("open");
+    });
+  }
 });
