@@ -1,21 +1,42 @@
-const year = document.getElementById("year");
-const lastModified = document.getElementById("lastModified");
-year.textContent = new Date().getFullYear();
-lastModified.textContent = document.lastModified;
+document.addEventListener("DOMContentLoaded", () => {
+  // Update footer year and last modified
+  const yearElement = document.getElementById("year");
+  const lastModifiedElement = document.getElementById("lastModified");
 
-// Wind chill calculator
-function calculateWindChill(temp, speed) {
-  return Math.round(
-    13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16)
-  );
-}
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
 
-const temp = parseFloat(document.getElementById("temp").textContent);
-const speed = parseFloat(document.getElementById("speed").textContent);
-const chill = document.getElementById("chill");
+  if (lastModifiedElement) {
+    lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
+  }
 
-if (temp <= 10 && speed > 4.8) {
-  chill.textContent = `${calculateWindChill(temp, speed)} °C`;
-} else {
-  chill.textContent = "N/A";
-}
+  // Wind Chill Calculator
+  function calculateWindChill(temp, speed) {
+    return Math.round(
+      13.12 +
+      0.6215 * temp -
+      11.37 * Math.pow(speed, 0.16) +
+      0.3965 * temp * Math.pow(speed, 0.16)
+    );
+  }
+
+  const tempElement = document.getElementById("temp");
+  const speedElement = document.getElementById("speed");
+  const chillElement = document.getElementById("chill");
+
+  if (tempElement && speedElement && chillElement) {
+    const temp = parseFloat(tempElement.textContent);
+    const speed = parseFloat(speedElement.textContent);
+
+    if (!isNaN(temp) && !isNaN(speed)) {
+      if (temp <= 10 && speed > 4.8) {
+        chillElement.textContent = `${calculateWindChill(temp, speed)} °C`;
+      } else {
+        chillElement.textContent = "N/A";
+      }
+    } else {
+      chillElement.textContent = "Invalid data";
+    }
+  }
+});

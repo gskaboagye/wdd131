@@ -12,7 +12,7 @@
   <header>
     <h1>Welcome to Ghana</h1>
     <picture>
-      <source srcset="images/ghana-hero-small.webp" media="(max-width: 600px)" />
+      <source srcset="images/ghana-hero-large.webp" media="(max-width: 600px)" />
       <source srcset="images/ghana-hero-large.webp" media="(min-width: 601px)" />
       <img src="images/ghana-hero-large.webp" alt="Ghana Cultural Landscape" />
     </picture>
@@ -23,7 +23,7 @@
       <h2>Weather <span class="emoji"></span></h2>
       <p>Temperature: <span id="temp">28</span>°C</p>
       <p>Wind Speed: <span id="speed">10</span> km/h</p>
-      <p>Wind Chill: <span id="chill">Calculating...</span></p>
+      <p>Wind Chill: <span id="windchill">Calculating...</span></p>
       <img src="images/weather-icon.svg" class="mobile-icon" alt="Weather Icon" />
     </section>
 
@@ -36,7 +36,7 @@
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Explore Ghana</p>
+    <p>&copy; <span id="currentyear"></span> Explore Ghana</p>
     <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 </body>
